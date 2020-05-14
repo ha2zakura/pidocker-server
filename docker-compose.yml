@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  server-test:
+    build: ./docker
+    container_name: server-test
+    ports:
+      - 8080:80
+    volumes:
+      - ./public:/var/www/html
+    tty: true
